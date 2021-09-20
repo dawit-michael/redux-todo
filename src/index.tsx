@@ -1,13 +1,11 @@
-import * as React from "react";
 import { StrictMode } from "react";
 import * as ReactDOM from "react-dom";
-
-import App from "./App";
+import ReduxProvider from "./redux_provider";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <ReduxProvider />
   </StrictMode>,
   rootElement
 );

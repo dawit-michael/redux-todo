@@ -1,4 +1,4 @@
-import { createSlice, Slice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "react-redux-typescript";
 import { RootState } from "../../app/store";
 
@@ -16,7 +16,7 @@ type TodosState = {
 };
 // init state
 const initialState = {
-  todoList: []
+  todoList: [],
 } as TodosState;
 
 const todoSlice = createSlice({
@@ -38,17 +38,15 @@ const todoSlice = createSlice({
     ) {
       state.todoList.push(action.payload);
     },
-    toggleTodo(state, action: PayloadAction<string, Todo>) {
+    toggleTodo(state, action: PayloadAction<string, TodoId>) {
       //  find the index of passed task id
-      const index = state.todoList.findIndex(
-        ({ id }) => id === action.payload.id
-      );
+      const index = state.todoList.findIndex(({ id }) => id === action.payload);
       //  if task id is found toggle the completed property
       if (index) {
         state.todoList[index].completed = !state.todoList[index].completed;
       }
-    }
-  }
+    },
+  },
 });
 
 export const { addTodo, toggleTodo } = todoSlice.actions;

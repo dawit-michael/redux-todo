@@ -1,7 +1,9 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
-const Home = (props): ReactElement => {
-  return <div>{props.message}</div>;
-};
+interface Props {}
+
+function Home({}: Props): ReactElement {
+  return <div></div>;
+}
 
 export default Home;

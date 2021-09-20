@@ -1,5 +1,5 @@
-import * as React from "react";
 import Input from "./components/input";
+import MyTodos from "./components/my-todos";
 import "./styles.css";
 import "./styles/main.css";
 
@@ -9,6 +9,7 @@ export default function App() {
       {/* input box */}
       <Input />
       {/* todo lists */}
+      <MyTodos />
       {/* done */}
     </div>
   );
