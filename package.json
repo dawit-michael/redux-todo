@@ -30,7 +30,8 @@
     "tailwindcss": "^2.2.15"
   },
   "scripts": {
-    "start": "npm run build:css && react-scripts start",
+    
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
